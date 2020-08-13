@@ -68,7 +68,7 @@ function Navigation() {
                 name="Wallet" 
                 component={WalletScreen}
                 options={{
-                    title: 'Wallet',
+                    title: 'Carteira',
                 }} 
             />
 
