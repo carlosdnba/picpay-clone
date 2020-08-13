@@ -5,11 +5,47 @@ import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import { Wrapper, Header, BalanceContainer, BalanceTitle, Balance, Container } from './styles.js';
 
 import Sugestions from '../../components/Sugestions';
-import Activities from '../../components/Activities';
+import ActivitiesHeader from '../../components/ActivitiesHeader';
 import Tips from '../../components/Tips';
 import Banner from '../../components/Banner';
+import ActivitiesCard from '../../components/ActivitiesCard';
 
 function Home() {
+
+    const items = [
+        {
+            id: 1,
+            transactionDepositor: 'xamps',
+            transactionReceiver: 'carlosdnba',
+            description: 'Corsinha amarelo',
+            transactionValue: '20.000,00',
+            transactionDate: '6 horas atrás',
+            commentsNumber: 12,
+            likesNumber: 52,
+        },
+        {
+            id: 2,
+            transactionDepositor: 'bolsonaro',
+            transactionReceiver: 'carlosdnba',
+            description: 'Cloroquina',
+            transactionValue: '100,00',
+            transactionDate: '5 dias atrás',
+            commentsNumber: 4,
+            likesNumber: 29,
+        },
+        {
+            id: 3,
+            transactionDepositor: 'koex',
+            transactionReceiver: 'carlosdnba',
+            description: 'Salário',
+            transactionValue: '1.600,00',
+            transactionDate: '12 horas atrás',
+            commentsNumber: 24,
+            likesNumber: 67,
+        },
+    ];
+
+
     return (
         <Wrapper>
             <Container>
@@ -26,13 +62,24 @@ function Home() {
 
             <Sugestions />
 
-            <Activities>
+            <ActivitiesHeader />
 
-            </Activities>
+            {items.map((item) => (
+                <ActivitiesCard 
+                    transactionDepositor={item.transactionDepositor}
+                    transactionReceiver={item.transactionReceiver}
+                    description={item.description}
+                    transactionValue={item.transactionValue}
+                    transactionDate={item.transactionDate}
+                    commentsNumber={item.commentsNumber}
+                    likesNumber={item.likesNumber} 
+                />
+            ))}
 
             <Tips />
 
             <Banner />
+
             </Container>
         </Wrapper>
     );

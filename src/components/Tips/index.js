@@ -39,7 +39,7 @@ const items = [
         title: 'Pague suas contas sem sair de casa',
         bgColor: '#badf76',
     },
-]
+];
 
 function Tips() {
     return (
