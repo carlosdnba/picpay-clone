@@ -12,7 +12,7 @@ import ActivitiesCard from '../../components/ActivitiesCard';
 
 function Home() {
 
-    const items = [
+    const item1 = [
         {
             id: 1,
             transactionDepositor: 'xamps',
@@ -22,7 +22,10 @@ function Home() {
             transactionDate: '6 horas atrás',
             commentsNumber: 12,
             likesNumber: 52,
-        },
+        }
+    ];
+
+    const items23 = [
         {
             id: 2,
             transactionDepositor: 'bolsonaro',
@@ -64,8 +67,9 @@ function Home() {
 
             <ActivitiesHeader />
 
-            {items.map((item) => (
+            {item1.map((item) => (
                 <ActivitiesCard 
+                    key={item.id}
                     transactionDepositor={item.transactionDepositor}
                     transactionReceiver={item.transactionReceiver}
                     description={item.description}
@@ -77,6 +81,19 @@ function Home() {
             ))}
 
             <Tips />
+
+            {items23.map((item) => (
+                <ActivitiesCard 
+                    key={item.id}
+                    transactionDepositor={item.transactionDepositor}
+                    transactionReceiver={item.transactionReceiver}
+                    description={item.description}
+                    transactionValue={item.transactionValue}
+                    transactionDate={item.transactionDate}
+                    commentsNumber={item.commentsNumber}
+                    likesNumber={item.likesNumber} 
+                />
+            ))}
 
             <Banner />
 
