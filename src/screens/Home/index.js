@@ -28,21 +28,44 @@ function Home() {
     const items23 = [
         {
             id: 2,
-            transactionDepositor: 'bolsonaro',
+            transactionDepositor: 'caraAleatorio',
             transactionReceiver: 'carlosdnba',
-            description: 'Cloroquina',
-            transactionValue: '100,00',
+            description: 'Freelancer',
+            transactionValue: '1000,00',
             transactionDate: '5 dias atrás',
             commentsNumber: 4,
             likesNumber: 29,
         },
         {
             id: 3,
-            transactionDepositor: 'koex',
+            transactionDepositor: 'chefe',
             transactionReceiver: 'carlosdnba',
             description: 'Salário',
             transactionValue: '1.600,00',
             transactionDate: '12 horas atrás',
+            commentsNumber: 24,
+            likesNumber: 67,
+        },
+    ];
+
+    const items45 = [
+        {
+            id: 4,
+            transactionDepositor: 'caraDaOlx',
+            transactionReceiver: 'carlosdnba',
+            description: 'Playstation',
+            transactionValue: '1200,00',
+            transactionDate: '25 dias atrás',
+            commentsNumber: 4,
+            likesNumber: 29,
+        },
+        {
+            id: 5,
+            transactionDepositor: 'chefe',
+            transactionReceiver: 'carlosdnba',
+            description: 'Salário',
+            transactionValue: '1.600,00',
+            transactionDate: '30 horas atrás',
             commentsNumber: 24,
             likesNumber: 67,
         },
@@ -94,6 +117,23 @@ function Home() {
                     likesNumber={item.likesNumber} 
                 />
             ))}
+
+            <Banner />
+
+            {items45.map((item) => (
+                <ActivitiesCard 
+                    key={item.id}
+                    transactionDepositor={item.transactionDepositor}
+                    transactionReceiver={item.transactionReceiver}
+                    description={item.description}
+                    transactionValue={item.transactionValue}
+                    transactionDate={item.transactionDate}
+                    commentsNumber={item.commentsNumber}
+                    likesNumber={item.likesNumber} 
+                />
+            ))}
+
+            <Tips />
 
             <Banner />
 
