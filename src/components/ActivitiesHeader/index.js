@@ -5,6 +5,7 @@ import {
     Header,
     Title,
     HeaderLeft,
+    HeaderButton,
     TextTotal,
     TextMine,
 } from './styles';
@@ -18,8 +19,13 @@ function Activities() {
                     Atividades
                 </Title>
                 <HeaderLeft>
-                    <TextTotal>Todas</TextTotal>
-                    <TextMine>Minhas</TextMine>
+                    <HeaderButton>
+                        <TextTotal>Todas</TextTotal>
+                    </HeaderButton>
+                    
+                    <HeaderButton>
+                        <TextMine>Minhas</TextMine>
+                    </HeaderButton>
                 </HeaderLeft>
             </Header>
 

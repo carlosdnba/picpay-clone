@@ -21,8 +21,9 @@ export const Title = styled.Text`
     justify-content: space-between 
  `;
 
+ export const HeaderButton = styled.TouchableOpacity``;
+
  export const TextTotal = styled.Text`
-    color: #fff;    
     font-size: 16px;
     color: #10c86e;
     text-decoration: underline;
