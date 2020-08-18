@@ -29,3 +29,7 @@ export const Balance = styled.Text`
     font-size: 20px;
     font-weight: bold;
 `;
+
+export const Divider = styled.View`
+    margin-top: 20px;
+`;

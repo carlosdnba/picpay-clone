@@ -1,5 +1,17 @@
 import React from 'react';
+
 import { AntDesign } from '@expo/vector-icons'; 
+
+import SettingsCard from '../../components/SettingsCard';
+
+import {
+    itemsAccount,
+    itemsPromotion,
+    itemsSignature,
+    itemsBusiness,
+    itemsSettings,
+    itemsGeneral,
+} from './arrays';
 
 import {
     Wrapper,
@@ -15,8 +27,6 @@ import {
     SettingsComponentContainer,
     SettingsComponentTitle,
     SettingsComponent,
-    SettingsComponentInsideText,
-    SettingsComponentInsideTitle,
     SettingsComponentLogoffTitle,
     BottomSpace,   
 } from './styles';
@@ -24,6 +34,7 @@ import {
 import avatar from '../../images/avatar.png';
 
 function Settings() {
+
     return (
         <Wrapper>
             <Container>
@@ -45,117 +56,74 @@ function Settings() {
                 <SettingsComponentContainer>
                     <SettingsComponentTitle>Minha conta</SettingsComponentTitle>
 
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Meu número</SettingsComponentInsideTitle>
-                        <SettingsComponentInsideText>celular</SettingsComponentInsideText>
-                    </SettingsComponent>
+                    {itemsAccount.map((item) => (
+                        <SettingsCard 
+                            key={item.id}
+                            componentTitle={item.componentTitle}
+                            componentText={item.componentText}
+                        />
+                    ))}
 
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Meu E-mail</SettingsComponentInsideTitle>
-                        <SettingsComponentInsideText>d************2@gmail.com</SettingsComponentInsideText>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Dados pessoais</SettingsComponentInsideTitle>
-                        <SettingsComponentInsideText>Nome, CPF e data de nascimento</SettingsComponentInsideText>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Conta Bancária</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Taxas e limites</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Meus endereços</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Meus favoritos</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Validar identidade</SettingsComponentInsideTitle>
-                        <SettingsComponentInsideText>Não verificado</SettingsComponentInsideText>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Atualizar cadastro</SettingsComponentInsideTitle>
-                    </SettingsComponent>
                 </SettingsComponentContainer>
 
                 <SettingsComponentContainer>
                     <SettingsComponentTitle>Promoções</SettingsComponentTitle>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Usar código promocional</SettingsComponentInsideTitle>
-                    </SettingsComponent>
+
+                    {itemsPromotion.map((item) => (
+                        <SettingsCard 
+                            key={item.id}
+                            componentTitle={item.componentTitle}
+                            componentText={item.componentText}
+                        />
+                    ))}
                 </SettingsComponentContainer>
 
                 <SettingsComponentContainer>
                     <SettingsComponentTitle>Minhas assinaturas</SettingsComponentTitle>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Ver minhas assinaturas</SettingsComponentInsideTitle>
-                    </SettingsComponent>
+
+                    {itemsSignature.map((item) => (
+                        <SettingsCard 
+                            key={item.id}
+                            componentTitle={item.componentTitle}
+                            componentText={item.componentText}
+                        />
+                    ))}
                 </SettingsComponentContainer>
 
                 <SettingsComponentContainer>
                     <SettingsComponentTitle>Para o meu negócio</SettingsComponentTitle>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>PicPay PRO</SettingsComponentInsideTitle>
-                    </SettingsComponent>
 
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Para estabelecimentos</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Venda por assinaturas</SettingsComponentInsideTitle>
-                    </SettingsComponent>
+                    {itemsBusiness.map((item) => (
+                        <SettingsCard 
+                            key={item.id}
+                            componentTitle={item.componentTitle}
+                            componentText={item.componentText}
+                        />
+                    ))}
                 </SettingsComponentContainer>
 
                 <SettingsComponentContainer>
                     <SettingsComponentTitle>Configurações</SettingsComponentTitle>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Usar digital pra pagar</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Alterar senha</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Privacidade</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Notificações</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Contas vinculadas</SettingsComponentInsideTitle>
-                    </SettingsComponent>
+
+                    {itemsSettings.map((item) => (
+                        <SettingsCard 
+                            key={item.id}
+                            componentTitle={item.componentTitle}
+                            componentText={item.componentText}
+                        />
+                    ))}
                 </SettingsComponentContainer>
 
                 <SettingsComponentContainer>
                     <SettingsComponentTitle>Geral</SettingsComponentTitle>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Precisa de ajuda?</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Sobre o PicPay</SettingsComponentInsideTitle>
-                    </SettingsComponent>
-                    
-                    <SettingsComponent>
-                        <SettingsComponentInsideTitle>Desativar minha conta</SettingsComponentInsideTitle>
-                    </SettingsComponent>
+
+                    {itemsGeneral.map((item) => (
+                        <SettingsCard 
+                            key={item.id}
+                            componentTitle={item.componentTitle}
+                            componentText={item.componentText}
+                        />
+                    ))}
                 </SettingsComponentContainer>
 
                 <SettingsComponentContainer>

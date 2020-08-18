@@ -76,18 +76,6 @@ export const SettingsComponent = styled.TouchableOpacity`
     justify-content: space-evenly;
 `;
 
-export const SettingsComponentInsideTitle = styled.Text`
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-`;
-
-export const SettingsComponentInsideText = styled.Text`
-    color: #8e8e93;
-    font-size: 14px;
-    font-weight: 100;
-`;
-
 export const SettingsComponentLogoffTitle = styled.Text`
     color: red;
     font-size: 14px;

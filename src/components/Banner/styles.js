@@ -2,7 +2,8 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     background: #6882bb;
-    margin: 25px 16px;
+    margin: 0 16px;
+    margin-top: 20px;
     border-radius: 8px;
     height: 140px;
     flex-direction: row;
